@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardioPulse | Pro Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>CardioPulse<span>.pro</span></h1>
+            <p>MS-IT Academic Edition</p>
+        </header>
+
+        <div class="grid">
+            <div class="card pulse">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Heart Rate</h3>
+                <div class="value"><span id="bpm">--</span> <small>BPM</small></div>
+                <button onclick="simulateHeartRate()">Measure</button>
+            </div>
+
+            <div class="card steps">
+                <i class="fas fa-walking"></i>
+                <h3>Daily Steps</h3>
+                <div class="value"><span id="stepCount">0</span></div>
+                <p id="status">Stationary</p>
+            </div>
+
+            <div class="card water">
+                <i class="fas fa-tint"></i>
+                <h3>Hydration</h3>
+                <div class="value"><span id="waterCount">0</span> <small>Glasses</small></div>
+                <button onclick="addWater()">+ Add Glass</button>
+            </div>
+
+            <div class="card timer">
+                <i class="fas fa-stopwatch"></i>
+                <h3>Activity Timer</h3>
+                <div class="value" id="stopwatch">00:00:00</div>
+                <div class="controls">
+                    <button id="startStop" class="btn-start">Start</button>
+                    <button id="reset" class="btn-reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
